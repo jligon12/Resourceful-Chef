@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1>Resourceful Chef</h1>
+<h2>Welcome to your resourceful chef!</h2>
+<h3>
+    <ul>
+        <li>Create a library of your favorite recipes</li>
+        <li>Track the contents of your pantry and fridge</li>
+        <li>Access your pantry and recipe library no matter where you are with your device</li>
+        <li>If you would like to access your recipe library, click "Access Recipe Library" below</li>
+        <li>If you would like to access your pantry, click "Access Pantry" below</li>
+    </ul>
+</h3>
+<h4>
+<a href="{{ url_for('recipe_library')}}">Access Recipe Library</a>
+<a href="{{ url_for('pantry')}}">Access Pantry</a>
+</h4>
+
+{% endblock %}

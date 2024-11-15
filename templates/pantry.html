@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1>Pantry</h1>
+<h4>
+<a href="{{ url_for('add_item')}}">Add Item</a>
+<a href="{{ url_for('remove_item')}}">Remove Item</a>
+</h4>
+<table>
+    <tr>
+        <th>Items</th>
+    </tr>
+    {% for item in items %}
+        <tr>
+            <td>{{item}}</td>
+        </tr>
+    {% endfor %}
+</table>
+<h5><a href="{{ url_for('index')}}">Return Home</a></h5>
+
+{% endblock %}

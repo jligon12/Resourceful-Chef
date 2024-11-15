@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1>+ Add Recipe</h1>
+<div class="content"></div>
+    <form action="/add_recipe" method="POST">
+        <label for="rname">Recipe Name:</label><br>
+        <input type="text" name="rname" id="rname"><br>
+        <label for="ingr">Recipe Ingredients:</label><br>
+        <input type="text" name="ingr" id="ingr"><br>
+        <input type="submit" value="Add Recipe">
+    </form>
+    
+</div>
+<h4>
+<a href="{{ url_for('recipe_library')}}">Return to Recipe Library</a>
+</h4>
+{% endblock %}

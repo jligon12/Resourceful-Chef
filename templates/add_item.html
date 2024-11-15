@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>+ Add Item</h1>
+    <form action="/add_item" method="POST">
+    <label for="additem">Item Name:</label><br>
+    <input type="text" name="additem" id="additem"><br>
+    <input type="submit" value="Add Item">
+    </form>
+
+</div>
+<h4>
+<a href="{{ url_for('pantry')}}">Return to Pantry</a>
+</h4>
+{% endblock %}

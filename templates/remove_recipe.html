@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1>- Remove Recipe</h1>
+<div class="content"></div>
+    <form action="/remove_recipe" method="POST">
+        <label for="removername">Recipe Name:</label><br>
+        <input type="text" name="removername" id="removername"><br>
+        <input type="submit" value="Remove Recipe" onclick="return confirm('Are you sure you would like to remove this recipe? The recipe will be permanently removed from the library and you will have to add it again manually.')" />
+    </form>
+    
+</div>
+<h4>
+<a href="{{ url_for('recipe_library')}}">Return to Recipe Library</a>
+</h4>
+{% endblock %}

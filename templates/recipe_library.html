@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <h1>Recipe Library</h1>
+    <h4>
+        <a href="{{ url_for('add_recipe')}}">Add Recipe</a>
+        <a href="{{ url_for('remove_recipe')}}">Remove Recipe</a>
+        </h4>
+    <table>
+        <tr>
+            <th>Recipe Name</th>
+        </tr>
+        {% for recipe in recipes %}
+            <tr>
+                <td>{{recipe}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</div>
+<h5>
+    <a href="{{ url_for('full_recipe_library')}}">View Full Recipe Library</a>
+    <a href="{{ url_for('index')}}">Return Home</a>
+</h5>
+<h6>Click "View Full Recipe Library" to see the recipe name and ingredients</h6>
+{% endblock %}
