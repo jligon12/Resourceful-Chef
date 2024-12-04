@@ -10,12 +10,12 @@ The main program makes requests to each microservice using REST APIs.
 Each microservice either has its own MongoDB database or receives a copy of data from the main program.
 
 Request Recipe Microservicey:
-  * app.py located in Request Recipe Microservice directory
+  * app.py located in Recipe Request Microservice directory
   * allows user to request a recipe or recipes with the greatest number of ingredients that they have available in their pantry
   * returns the name of the most resourceful recipe or recipes they have entered in their recipe library
 
 Dates-Notes Microservice:
-  * app.py located in Dates-Notes Microservice directory
+  * app.py located in Journal Dates-Notes Microservice directory
   * part of the Main Program's Recipe Journal
   * allows user to record dates they made a recipe and notes about a recipe they made
   * Records are displayed on pages
@@ -28,6 +28,6 @@ Login-Logout Microservice:
   * when login attempt is made, username and password are confirmed with logins stored in MongoDB Database
 
 Sort Ratings Microservice:   (written by teammate Courtney Sanders)
-  * sort-microservice.py located in Sort Rating Microservice directory
+  * sort-microservice.py located in Rating Sort Microservice directory
   * allows the user the sort the list of recipe ratings they have previously entered so that they are displayed from highest-lowest rating, lowest to highest rating, A-Z, or Z-A
 
