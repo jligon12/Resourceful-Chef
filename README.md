@@ -1,13 +1,14 @@
 # Resourceful Chef
 The Resourceful Chef main Program and microservices were written using Flask, Python, MongoDB, HTML, and CSS.
 
+The main program makes requests to each microservice using REST APIs. 
+
+Each microservice either has its own MongoDB database or receives a copy of data from the main program.
+
 Main Program - app.py located in main Resourceful Chef directory
   * includes a recipe library where the user can save their favorite recipes
   * includes a "pantry" where the user catalogues ingredients they have available in their pantry or refridgerator
   * includes a recipe journal where users can record ratings of the recipes they have made 
-
-The main program makes requests to each microservice using REST APIs. 
-Each microservice either has its own MongoDB database or receives a copy of data from the main program.
 
 Request Recipe Microservicey:
   * app.py located in Recipe Request Microservice directory
