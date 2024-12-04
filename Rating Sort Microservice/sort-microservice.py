@@ -1,3 +1,5 @@
+# Author: This microservice was written for the Resourceful Chef Program by Courtney Sanders
+
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
