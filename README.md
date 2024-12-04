@@ -10,7 +10,7 @@ Main Program - app.py located in main Resourceful Chef directory
   * includes a "pantry" where the user catalogues ingredients they have available in their pantry or refridgerator
   * includes a recipe journal where users can record ratings of the recipes they have made 
 
-Request Recipe Microservicey:
+Request Recipe Microservice:
   * app.py located in Recipe Request Microservice directory
   * allows user to request a recipe or recipes with the greatest number of ingredients that they have available in their pantry
   * returns the name of the most resourceful recipe or recipes they have entered in their recipe library
