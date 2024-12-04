@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link main.css - must use jinga + function from flask(url_for), name of static folder, filename = name of file name-->
      <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}"> 
-    <ul>
-    <li><a href="{{ url_for('index')}}">Home</a></li>
-    <li><a href="{{ url_for('pantry')}}">Pantry</a></li>
-    <li><a href="{{ url_for('recipe_library')}}">Recipe Library</a></li>
-    </ul>
-     {% block head %}{% endblock %}
+    <header>
+    <h1>Resourceful Chef</h1>
+    </header>
+    <nav>
+    <a href="{{ url_for('login')}}">Login/Logout</a>  
+    <a href="{{ url_for('index')}}">Home</a>
+    <a href="{{ url_for('pantry')}}">Pantry</a>
+    <a href="{{ url_for('recipe_library')}}">Recipe Library</a>
+    <a href="{{ url_for('recipe_journal')}}">Recipe Journal</a>
+    </nav>
+
+    {% block head %}{% endblock %}
 </head>
 <body>
     {% block body %}{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <h2>Recipe Ratings</h2>
+
+    <table>
+        <tr>
+            <th>Recipe Name</th>
+            <th>Rating</th>
+            <th>Sort By:
+                <form action="/recipe_ratings" method="POST">
+                <label for="sortby"></label>
+                <select name="sortby" id="sortby">
+                <option value=""></option>
+                <option value="high-low">rating high to low</option>
+                <option value="low-high">rating low to high</option>
+                <option value="name-ascending">recipe A-Z</option>
+                <option value="name-descending">recipe Z-A</option>
+                <input type="submit" value="Sort Ratings">
+            </form></th>
+        </tr>
+        {% for recipe_rating in recipe_ratings_list %}
+            {% for key, value in recipe_rating.items() %}
+                <tr>
+                    <td>{{recipe_rating['recipe']}}</td>
+                    <td>{{recipe_rating['rating']}}</td>
+                </tr>
+                <!-- {% endfor %} -->
+        {% endfor %} 
+    </table>
+
+
+</div>
+<h5>
+    <a href="{{ url_for('recipe_journal')}}">Return to Recipe Journal</a>
+    <a href="{{ url_for('recipe_rating')}}">Rate a Recipe</a>
+</h5>
+{% endblock %}

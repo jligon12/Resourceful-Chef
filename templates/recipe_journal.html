@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h2>Welcome to your recipe journal!</h2>
+<h3>
+    <ul>
+        <li>Rate recipes</li>
+        <li>Track the date you made a recipe</li>
+        <li>Record notes about making recipes</li>
+    </ul>
+</h3>
+<h4>
+<a href="{{ url_for('recipe_ratings')}}">Recipe Ratings</a>
+<a href="{{ url_for('recipe_dates')}}">Record Dates</a>
+<a href="{{ url_for('recipe_notes')}}">Record Notes</a>
+<a href="{{ url_for('index')}}">Return Home</a>
+</h4>
+
+{% endblock %}

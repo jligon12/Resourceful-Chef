@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <h2>Recipe Dates</h2>
+        <table>
+            <tr>
+                <th>Recipe Name</th>
+                <th>Date</th>
+            </tr>
+            {% for recipe_date in recipe_dates %}
+                {% for key, value in recipe_date.items() %}
+                    <tr>
+                        <td>{{ recipe_date['recipe'] }}</td>
+                        <td>{{ recipe_date['date'] }}</td>
+                    </tr>
+                    <!-- {% endfor %} -->
+            {% endfor %}
+        </table>
+
+    <h2>Record Date Made</h2>
+    <form action="/recipe_dates" method="POST">
+        <label for="rname">Recipe Name:</label><br>
+        <input type="text" name="rname" id="rname"><br>
+        <label for="date">Date Made:</label><br>
+        <input type="date" name="date" id="date"><br>
+        <input type="submit" value="Add Record">
+    </form>
+    
+</div>
+<h4>
+<a href="{{ url_for('recipe_journal')}}">Return to Recipe Journal</a>
+</h4>
+
+{% endblock %}

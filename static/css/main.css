@@ -1,21 +1,48 @@
 /* Aqua=#98DBC6, Turq=#5BC8AC, CanaryYell=#E6D72A, PinkTulip=#F18D9E */
-body {
-
-    margin:0px;
-    font-family: sans-serif;
-    background: #626D71;
-
-    h1 {background-color: #DDBC95;
-        height: 100px;
-        width: 60%;
+header{
+    background:#626D71;
+    height: 80px;
+    width: 100%;
+    /* border: solid;
+    border-width: 5px;
+    border-color: #DDBC95; */
+    /* margin:auto; */
+    h1 {
         margin: auto;
         text-align: center;
-        font-size: 80px;
-        color: #B38867;
-        border-style: solid;
-        border-color: #B38867;
-        border-width: 5px;
+        font-size: 60px;
+        color: #CDCDC0;
+        font-weight: 500;
     }
+}
+nav{
+    background:white;
+    height: 40px;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: .1%;
+    text-align: center;
+    a{
+        padding:4%;
+        font-size: 18px;
+        font-weight: 600;
+        width: 100%;
+        color: #626D71;
+
+    }
+}
+body {
+        background: #626D71;
+        height: 100%;
+        justify-content: center;
+        font-family: sans-serif;
+    
+/*     
+
+    /* margin:0px;
+    font-family: sans-serif;
+    background: #626D71; */
+
     h2{
         font-size: 40px;
         color: #CDCDC0;
@@ -100,7 +127,7 @@ body {
     form{
         text-align: left;
         padding-left:40%;
-        padding-top: 5%;
+        /* padding-top: 5%; */
         color: #CDCDC0;
         font-size: 22px;
         font-weight: 700;
@@ -115,11 +142,22 @@ body {
             font-size: 18px;
             font-weight: 600;
           }
+        
+          input[type=number] {
+            border: 2px solid #B38867;
+            background-color: #DDBC95;
+            border-radius: 4px;
+            width: 30%;
+            padding:1%;
+            color:#B38867;
+            font-size: 18px;
+            font-weight: 600;
+          }
         input[type=submit]{
             margin-top: 2%;
             margin-left: 10%;
             text-align: center;
-            width: 14%;
+            width: 18%;
             padding:.75%;
             color:#CDCDC0;
             background-color: #626D71;
@@ -149,7 +187,6 @@ body {
         }
         
     }
+     */
 
-
-
-}
+}}

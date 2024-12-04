@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block body %}
-<h1>Pantry</h1>
+
+<h2>Pantry</h2>
 <h4>
 <a href="{{ url_for('add_item')}}">Add Item</a>
 <a href="{{ url_for('remove_item')}}">Remove Item</a>
@@ -21,5 +22,6 @@
     {% endfor %}
 </table>
 <h5><a href="{{ url_for('index')}}">Return Home</a></h5>
+
 
 {% endblock %}

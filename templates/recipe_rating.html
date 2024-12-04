@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <h2>Recipe Ratings</h2>
+    <form action="/recipe_rating" method="POST">
+        <label for="rname">Recipe Name:</label><br>
+        <input type="text" name="rname" id="rname"><br>
+        <label for="rating">Recipe Rating (out of 10):</label><br>
+        <input type="number" name="rating" id="rating"><br>
+        <input type="submit" value="Rate Recipe">
+    </form>
+    
+</div>
+<h4>
+<a href="{{ url_for('recipe_ratings')}}">Return to Recipe Ratings</a>
+</h4>
+
+{% endblock %}

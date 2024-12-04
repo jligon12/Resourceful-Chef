@@ -7,21 +7,21 @@
 {% block body %}
 
 <div class="content">
-    <h1>Full Recipe Library</h1>
-    <table>
-        <tr>
-            <th>Recipe Name</th>
-            <th>Recipe Ingredients</th>
-        </tr>
-        {% for recipe in recipes %}
-        {% for ingredient in ingredients %}
+    <h2>Full Recipe Library</h2>
+        <table>
             <tr>
-                <td>{{recipe}}</td>
-                <td>{{ingredient}}</td>
+                <th>Recipe Name</th>
+                <th>Recipe Ingredients</th>
             </tr>
-        {% endfor %}
-        {% endfor %}
-    </table>
+            {% for recipe in recipes %}
+                {% for key, value in recipe.items() %}
+                    <tr>
+                        <td>{{ recipe['Name'] }}</td>
+                        <td>{{ recipe['Ingredients'] }}</td>
+                    </tr>
+                    <!-- {% endfor %} -->
+            {% endfor %}
+        </table>
 
 </div>
 <h5>

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <h2>Recipe Notes</h2>
+        <table>
+            <tr>
+                <th>Recipe Name</th>
+                <th>Notes</th>
+            </tr>
+            {% for recipe_note in recipe_notes %}
+                {% for key, value in recipe_note.items() %}
+                    <tr>
+                        <td>{{recipe_note['recipe']}}</td>
+                        <td>{{recipe_note['note']}}</td>
+                    </tr>
+                    <!-- {% endfor %} -->
+            {% endfor %} 
+        </table>
+        
+    <h2>Record Notes</h2>
+    <form action="/recipe_notes" method="POST">
+        <label for="rname">Recipe Name:</label><br>
+        <input type="text" name="rname" id="rname"><br>
+        <label for="note">Notes:</label><br>
+        <input type="text" name="note" id="note"><br>
+        <input type="submit" value="Add Record">
+    </form>
+    
+</div>
+<h4>
+<a href="{{ url_for('recipe_journal')}}">Return to Recipe Journal</a>
+</h4>
+
+{% endblock %}
