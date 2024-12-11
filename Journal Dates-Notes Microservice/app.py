@@ -51,7 +51,6 @@ def addNote():
 
 @app.route('/getNotes', methods = ['GET'])
 def getNotes():
-    #data = request.get_json()
     recipe_notes = notes.find({},{'_id':0, 'recipe':1, 'note':1})
     documents = list(recipe_notes)
     json_string = json.dumps(documents, default=json_util.default)
