@@ -1,12 +1,7 @@
-/* Aqua=#98DBC6, Turq=#5BC8AC, CanaryYell=#E6D72A, PinkTulip=#F18D9E */
 header{
     background:#626D71;
     height: 80px;
     width: 100%;
-    /* border: solid;
-    border-width: 5px;
-    border-color: #DDBC95; */
-    /* margin:auto; */
     h1 {
         margin: auto;
         text-align: center;
@@ -36,12 +31,6 @@ body {
         height: 100%;
         justify-content: center;
         font-family: sans-serif;
-    
-/*     
-
-    /* margin:0px;
-    font-family: sans-serif;
-    background: #626D71; */
 
     h2{
         font-size: 40px;
@@ -187,6 +176,6 @@ body {
         }
         
     }
-     */
+    
 
-}}
+}
